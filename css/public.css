@@ -1,0 +1,136 @@
+*{
+	padding: 0;
+	margin:0;
+	list-style: none;
+	text-decoration:none;
+}
+.clearfix{
+	*zoom:1;
+}
+.clearfix:after{
+	content: "";
+	display: block;
+	clear:both;
+}
+.header{
+	width: 100%;
+}
+.header_con{
+	width: 90%;
+	margin: 0 auto;
+	height: 62px;
+	background-color: #fff;
+}
+.logo{
+	float: left;
+	margin-top: 4px;
+}
+.logo img{
+	width: 120px;
+	height: 50px;
+}
+.nav{
+	float: left;
+/*	overflow: hidden;*/
+}
+.login{
+	float: left;
+	margin-top: 20px;
+}
+.nav .item{
+	float: left;
+	margin: 16px 40px;
+	list-style: none;
+	width: 88px;
+	height: 30px;
+	line-height: 30px;
+	position: relative;
+}
+ /*伪类与三角形的使用*/
+.nav .item:nth-of-type(1){
+	position: relative;
+}
+.nav .item:nth-of-type(1):after{ 
+	content: "";
+	display: inline-block;
+	width: 0;
+	height: 0;
+	border-left: 4px solid transparent;
+	border-right: 4px solid transparent;
+	border-bottom: :4px solid transparent;
+	border-top:4px solid #555;
+	vertical-align: middle;
+}
+.nav .item:nth-of-type(1):hover:after{ 
+	content: "";
+	display: inline-block;
+	width: 9px;
+	height: 8px;
+	border:none;
+	background:url('../images/icon.png') -1px -58px;
+	vertical-align: middle;
+}
+
+.nav .item:hover a{
+	color:red;
+}
+.nav .item a{
+	text-decoration: none;
+	color :#575e65;
+}
+
+.nav .item .sub_nav{
+	position: absolute;
+	left:0;
+	height: 244px;
+	width: 180px;
+	top:50px;
+	background-color: #fff;
+	z-index: 1;
+	padding-left: 20px;
+	overflow: hidden;
+	height: 0;
+}
+.nav .item .sub_nav li{
+	float:left;
+	margin-right: 60px; 
+	font-size: 12px;
+}
+.nav .item .sub_nav li a{
+	color: #333;
+}
+.nav .item .sub_nav li a:hover{
+	color: #e83837;
+}
+
+.login{
+	margin-top: 20px;
+	float: right;
+}
+.login li{
+	float: left;
+	list-style: none;
+	width: 40px;
+	height: 24px;
+	font-size: 14px;
+	line-height: 24px;
+	text-align: center;
+	margin-right: 4px;
+}
+.login li a{
+	text-decoration: none;
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	color: #fff;
+	border-radius: 5px;
+}
+.login .input a{
+	background-color: #3ba7ff;
+}
+.login .register a{
+	background-color: #ff7600;
+}
+.login .sign a{
+	background-color: #1bb019;
+}
